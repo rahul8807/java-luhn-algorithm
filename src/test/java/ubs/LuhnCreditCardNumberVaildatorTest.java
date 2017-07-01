@@ -33,7 +33,7 @@ public class LuhnCreditCardNumberVaildatorTest {
 
 		IntStream.range(0, validCreditCardNos.size()).forEach( (i) ->
 				 {
-					 Assert.assertTrue(validCreditCardNos.get(i)+" is Valid \n", luhnCreditCardNumberValidator.isCreditCardNoValid(validCreditCardNos.get(i)));
+					 Assert.assertTrue(validCreditCardNos.get(i)+" is Valid \n", luhnCreditCardNumberValidator.isCreditCardNumberValid(validCreditCardNos.get(i)));
 				 }
 		);
 		
@@ -45,7 +45,7 @@ public class LuhnCreditCardNumberVaildatorTest {
 
 		IntStream.range(0, invalidCreditCardNos.size()).forEach( (i) ->
 				 {
-					 Assert.assertFalse(invalidCreditCardNos.get(i)+" is Not Valid \n", luhnCreditCardNumberValidator.isCreditCardNoValid(invalidCreditCardNos.get(i)));
+					 Assert.assertFalse(invalidCreditCardNos.get(i)+" is Not Valid \n", luhnCreditCardNumberValidator.isCreditCardNumberValid(invalidCreditCardNos.get(i)));
 				 }
 		);
 		

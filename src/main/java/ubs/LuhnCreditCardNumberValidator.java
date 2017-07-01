@@ -52,7 +52,7 @@ public class LuhnCreditCardNumberValidator {
 	private final Predicate<Integer> isThisValidCreditNumber = (value) ->  (value % 10 == 0) ? Boolean.TRUE : Boolean.FALSE;
 
 
-	public final boolean isCreditCardNoValid(Long inputCreditCardNumber) {
+	public final boolean isCreditCardNumberValid(Long inputCreditCardNumber) {
 		
 		List<Integer> creditCardNumber = getCreditCardNumberInReverseOrder.apply(inputCreditCardNumber);
 		doubleEveryOtherDigitOfCreditCardNumber.accept(creditCardNumber);
